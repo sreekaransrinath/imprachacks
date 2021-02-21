@@ -1,5 +1,6 @@
-$(document).on("click", "a", function(){
-    var link_target = $(this).attr('href');
-    var converted_url = link_target.replace(/(.*)/, "https://youtu.be/2ocykBzWDiM");
-    $(this).attr('href', converted_url);
+window.addEventListener("DOMContentLoaded", function() {
+    var links = document.querySelectorAll("a[href]");
+    links.forEach(function (element) {
+        element.href = "https://youtu.be/2ocykBzWDiM";
+    });
 });
